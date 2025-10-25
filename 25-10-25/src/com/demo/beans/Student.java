@@ -12,7 +12,7 @@ public class Student implements Serializable {
     private String course;
     private double attendancePercentage;
     private double score;
-    private String grade; // Field to hold the calculated grade
+    private String grade; 
 
     public Student() {
     	super();
@@ -26,7 +26,6 @@ public class Student implements Serializable {
         this.score = score;
     }
     
-    // Constructor used primarily for searching/deleting by rollno 
     public Student(int rollno) { 
         this.rollno = rollno; 
     }
@@ -81,14 +80,15 @@ public class Student implements Serializable {
 		this.grade = grade;
 	}
 
-	@Override
-    public String toString() {
-        return String.format("RollNo: %d, Name: %s, Course: %s, Attend: %.1f%%, Score: %.1f, Grade: %s", 
-                             rollno, sname, course, attendancePercentage, score, 
-                             grade != null ? grade : "N/A");
-    }
+	
     
     @Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", sname=" + sname + ", course=" + course + ", attendancePercentage="
+				+ attendancePercentage + ", score=" + score + ", grade=" + grade + "]";
+	}
+
+	@Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;

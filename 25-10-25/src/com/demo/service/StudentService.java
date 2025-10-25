@@ -12,9 +12,9 @@ public interface StudentService {
 
 	Iterable<Student> displayAllStudents();
 
-	Student findStudent(int rollno);
-
-	boolean removeStudent(int rollno);
+//	Student findStudent(int rollno);
+//
+//	boolean removeStudent(int rollno);
 
 	List<Student> getSortedByAttendance();
 

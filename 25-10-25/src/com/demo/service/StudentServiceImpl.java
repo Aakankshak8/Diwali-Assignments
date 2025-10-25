@@ -13,7 +13,7 @@ public class StudentServiceImpl implements StudentService {
     
     private StudentDao sdao = new StudentDaoImpl(); 
     private Scanner sc = new Scanner(System.in);
-    private final String FILE_NAME = "studentdata1.txt"; 
+    private final String FILE_NAME = "studentdata.txt"; 
     
     private String calculateGrade(Student student) throws LowAttendanceException {
         if (student.getAttendancePercentage() < 60.0) {
@@ -97,15 +97,6 @@ public class StudentServiceImpl implements StudentService {
         return sortedList;
     }
     
-    @Override
-    public boolean removeStudent(int rollno) {
-        return sdao.deleteByRollNo(rollno);
-    }
-
-    @Override
-    public Student findStudent(int rollno) {
-        return sdao.findByRollNo(rollno);
-    }
 
     @Override
     public List<Student> displayAllStudents() {

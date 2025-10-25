@@ -12,9 +12,9 @@ public interface StudentDao {
 
 	List<Student> findAll();
 
-	boolean deleteByRollNo(int rollno);
-
-	Student findByRollNo(int rollno);
+//	boolean deleteByRollNo(int rollno);
+//
+//	Student findByRollNo(int rollno);
 
 	void writeData(String fILE_NAME);
 

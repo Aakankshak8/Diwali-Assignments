@@ -42,16 +42,7 @@ public class StudentDaoImpl implements StudentDao {
         return studentList.add(s);
     }
 
-    @Override
-    public boolean deleteByRollNo(int rollno) {
-        return studentList.remove(new Student(rollno));
-    }
 
-    @Override
-    public Student findByRollNo(int rollno) {
-        int pos = studentList.indexOf(new Student(rollno));
-        return pos != -1 ? studentList.get(pos) : null;
-    }
 
     @Override
     public List<Student> findAll() {
